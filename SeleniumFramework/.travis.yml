@@ -1,6 +1,10 @@
 language: java
-jdk: oraclejdk8
-sudo: false
+jdk:
+  - oraclejdk8
 
+# Skip the default mvn command because we want to set the profile explicitly
+install: true
 script:
-- ./mvn clean install -B
+  - mvn -e install verify
+
+
