@@ -4,6 +4,7 @@ jdk:
 
 # Skip the default mvn command because we want to set the profile explicitly
 install: true
+before_script: cd SeleniumFramework
 script:
   - mvn -e install verify
 
