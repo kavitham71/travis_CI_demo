@@ -1,10 +1,11 @@
 language: java
 jdk:
   - oraclejdk8
-
+env:
+- Directory_name: SeleniumFramework
 # Skip the default mvn command because we want to set the profile explicitly
 install: true
-before_script: cd SeleniumFramework
+before_script: cd Directory_name
 script:
   - mvn -e install verify
 
